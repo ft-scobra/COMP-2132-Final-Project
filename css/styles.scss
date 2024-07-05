@@ -1,0 +1,139 @@
+﻿// Variables
+$white: #FFF;
+$green: #85ecc5;
+$navy: #1a192c;
+$baltic-sea: #23212b;
+$tuna: #32323f;
+
+// Mixin for button styles
+@mixin button-styles($bg-color, $text-color) {
+    background: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
+
+// Base styles
+body {
+    color: $white;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: $baltic-sea;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: $green;
+}
+
+a:hover {
+    text-decoration: underline;
+    filter: brightness(1.2);
+}
+
+// Header styles
+.header {
+    background-color: $navy;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.226);
+    flex-direction: column;
+    z-index: 1;
+    
+    h1, h2 {
+        font-family: "Rubik", sans-serif;
+        font-weight: 700;
+    }
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+// Main content styles
+.main-content {
+    background-color: $tuna;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dice-images {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.5s;
+
+            &.animate {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .winner-text {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    > div {
+        max-width: 600px;
+        padding: 20px 50px;
+        border: black 2px solid;
+        border-radius: 15px 15px 15px 15px;
+        background-color: $baltic-sea;
+        margin-bottom: 20px;
+    }
+
+    .players {
+        background-color: $baltic-sea;
+        filter: brightness(1.15);
+        padding: 5px;
+        box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.226);
+        border-radius: 20px 20px 20px 20px;
+        margin-bottom: 20px;
+    }
+}
+
+// Footer
+.footer {
+    background-color: $navy;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+}
+
+// Button
+button {
+    @include button-styles($green, $navy);
+}
+
+// Initial hidden state for Fade In
+.fade-in {
+    display: none;
+}

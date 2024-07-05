@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project - Dice Game</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./scripts/fade-in.js" defer></script>
+    <script src="./scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header fade-in">
+            <h1>Final Project - Dice Game</h1>
+            <h2>Done by: Stanislav Ferrao</h2>
+        </div>
+        <div class="main-content fade-in">
+            <div id="game">
+                <div id="player" class="players fade-in">
+                    <h3>Player</h3>
+                    <div id="player-dice" class="dice-images"></div>
+                    <p>Score: <span id="player-score">0</span></p>
+                    <p>Total Score: <span id="player-total-score">0</span></p>
+                </div>
+                <div id="computer" class="players fade-in">
+                    <h3>Computer</h3>
+                    <div id="computer-dice" class="dice-images"></div>
+                    <p>Score: <span id="computer-score">0</span></p>
+                    <p>Total Score: <span id="computer-total-score">0</span></p>
+                </div>
+                <div class="buttons fade-in">
+                    <button id="roll-dice">Roll Dice</button>
+                    <button id="reset-game">Reset Game</button>
+                </div>
+                <p id="winner" class="winner-text"></p>
+            </div>
+        </div>
+        <div class="footer fade-in">
+            <p>&copy; <a href="https://github.com/ft-scobra"> Stanislav Ferrao</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
